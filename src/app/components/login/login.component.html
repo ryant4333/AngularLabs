@@ -1,0 +1,8 @@
+<body>
+    <form>
+        <input type="text" [(ngModel)]="firstName" name="firstName">
+        <input type="password" [(ngModel)]="pass" name="pass">
+        <button (click)="itemClicked()">Login</button>
+    </form>
+    <h2 *ngIf="showErr">Incorrect User or Password</h2>
+</body>
