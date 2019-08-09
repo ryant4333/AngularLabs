@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-
+const path = require('path');
 app.use(express.static(path.join(__dirname, '../dist/week4/')));
 console.log(__dirname);
 
@@ -18,6 +18,4 @@ const server = http.listen(3000, () => {
     console.log("server on port: 3k");
 });
 
-app.post('/login', require('./router/postLogin'));
-app.post('/account', require('./router/account'));
-
+require('./routes/postLogin.js')(app, path);
