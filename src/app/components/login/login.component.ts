@@ -14,12 +14,14 @@ const users = [
 })
 export class LoginComponent implements OnInit {
 
-  firstName = '';
-  pass = '';
-  showErr = false;
+  firstName: string;
+  pass: string;
+  showErr: boolean;
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.showErr = false;
+  }
 
   ngOnInit() {
   }
