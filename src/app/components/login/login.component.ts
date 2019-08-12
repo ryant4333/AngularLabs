@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
 
   constructor(private router: Router) {
-    this.showErr=false;
+    this.showErr = false;
   }
 
   ngOnInit() {
