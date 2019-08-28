@@ -1,2 +1,17 @@
 <h1>Accounts Page</h1>
 <img src="../../../assets/Images/Granny.jpg">
+
+<ng-template [ngIf]="show"; else option2>
+    <div>Some Text</div>
+</ng-template>
+<!-- 
+<li *ngFor="let item of items; let i=index'let c=count">
+    {{i+1}} of {{c}} - {{item.name}}
+</li>
+
+<div [ngSwitch]="item.color">
+    <app-color-red *ngSwitchCase="'red'"></app-color-red>
+    <app-color *ngSwitchDefault></app-color>
+</div>
+
+[(banana in a box)] -->

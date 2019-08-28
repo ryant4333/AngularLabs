@@ -18,4 +18,4 @@ const server = http.listen(3000, () => {
     console.log("server on port: 3k");
 });
 
-require('./routes/postLogin.js')(app, path);
+app.post('/login', require('./api/router/postLogin'));
