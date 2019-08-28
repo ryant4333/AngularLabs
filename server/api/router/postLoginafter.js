@@ -8,7 +8,7 @@ module.exports = (req, res) {
         "userage": req.body.userage
     }
     let uArray = [];
-    fs.readFile('../auth/extendedUsers.json', 'utf8', (err, data) => {
+    fs.readFile('../auth/extendedUsers.json', 'utf-8', (err, data) => {
         if (err) throw err;
         uArray = JSON.parse(data);
         uArray.path(userobj);

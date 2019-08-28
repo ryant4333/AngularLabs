@@ -6,7 +6,7 @@ module.exports = (req, res) => {
     c = u + p;
     console.log(c);
 
-    fs.readFile("../api/auth/users.json", utf8, (err, data) => {
+    fs.readFile('./api/auth/users.json', 'utf8', (err, data) => {
         if (err) throw err;
         let userArray = JSON.parse(data);
         console.log(userArray);
