@@ -1,18 +1,9 @@
 [{"username":"ryant4333",
-    "birthdate":"20/05/95",
-    "age":24,
-    "email":"ryant4333@hotmail.com",
-    "password":"1234",
-    "valid":true},
+    "pwd":"1234"
+},
 {"username":"ryan",
-    "birthdate":"21/05/95",
-    "age":24,
-    "email":"ryanctaylor95@gmail.com",
-    "password":"1234",
-    "valid":true},
+    "pwd":"1234"
+},
 {"username":"Phil",
-    "birthdate":"20/05/95",
-    "age":24,
-    "email":"Phil@hotmail.com",
-    "password":"1234",
-    "valid":false}]
+    "pwd":"1234"
+}]

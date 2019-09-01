@@ -13,6 +13,7 @@ module.exports = (req, res) => {
         let i = userArray.findIndex(user => 
             ((user.username == u) && (user.pwd == p)));
         if (i == -1) {
+            console.log("NOT MATCHING!");
             res.send({ "ok": false })
         } else {
             console.log(userArray[i]);

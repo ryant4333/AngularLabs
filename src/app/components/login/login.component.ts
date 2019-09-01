@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
     .subscribe((data: any) => {
       alert(JSON.stringify(this.userpwd));
       if (data.ok) {
+        console.log("HOLY SHIT ITS WORKING")
         sessionStorage.setItem('userid', this.userobj.userid.toString());
         sessionStorage.setItem('username', this.userobj.username);
         sessionStorage.setItem('userbirthdate', this.userobj.userbirthdate);

@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = (req, res) {
+module.exports = (req, res) => {
     let userobj = {
         "userid": req.body.userid,
         "username": req.body.username,
