@@ -7,13 +7,33 @@ module.exports = (req, res) => {
     let newUser = {
         username: u,
         email: e,
-        pwd: p
+        pwd: p,
+        role: "user"
     };
 
-    let data = JSON.stringify(newUser);
-    fs.writeFile('./api/auth/users.json', data, (err) => {
+    console.log(newUser);
+
+    fs.readFile('./api/auth/users.json', 'utf8', (err, jsonString) => {
         if (err) throw err;
-        console.log("data written to file");
-        res.send({ "gen": true });
-    });
+        let data = JSON.parse(jsonString)
+
+        let i = data.findIndex(user => 
+            (user.username == u));
+        if (i != -1) {
+            console.log("User already exists")
+            res.send({ "gen": false })
+            return
+        }
+        
+        data.push(newUser)
+        
+        data = JSON.stringify(data, null, 2)
+
+
+        fs.writeFile('./api/auth/users.json', data, (err) => {
+            if (err) throw err;
+            console.log("data written to file");
+            res.send({ "gen": true });
+        });
+    })
 }

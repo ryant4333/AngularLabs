@@ -1,0 +1,32 @@
+<div class="groupTab">
+    <h1>Groups</h1>
+    <ul>
+        <li *ngFor="let group of groupsData" (click)="chooseGroup(group)">
+            {{group.groupName}}
+        </li>
+    </ul>
+
+</div>
+
+<div class="channelTab" *ngIf="chosenGroup">
+    <h1>Channels</h1>
+    <ul>
+        <li *ngFor="let channel of chosenGroup.channels" (click)="chooseChannel(channel)">
+            {{channel.channelName}}
+        </li>
+    </ul>
+
+</div>
+
+<div class="userTab" *ngIf="chosenChannel">
+    <h1>Users</h1>
+    <ul>
+        <li *ngFor="let user of chosenChannel.users">{{user.users}}</li>
+    </ul>
+
+</div>
+
+<div class="chatBox">
+    <h1>The chats</h1>
+    
+</div>

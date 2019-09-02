@@ -1,12 +1,20 @@
-[{"username":"ryant4333",
-    "email": "ryant4333@hotmail.com",
-    "pwd":"1234"
-},
-{"username":"ryan",
-    "email": "ryant4333@hotmail.com",
-    "pwd":"1234"
-},
-{"username":"Phil",
-    "email": "ryant4333@hotmail.com",
-    "pwd":"1234"
-}]
+[
+  {
+    "username": "super",
+    "email": "email",
+    "pwd": "1234",
+    "role": "super"
+  },
+  {
+    "username": "Ryan",
+    "email": "Ryant4333@hotmail.com",
+    "pwd": "1234",
+    "role": "user"
+  },
+  {
+    "username": "Luka",
+    "email": "Luka@email.com",
+    "pwd": "1234",
+    "role": "user"
+  }
+]

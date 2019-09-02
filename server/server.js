@@ -21,3 +21,5 @@ const server = http.listen(3000, () => {
 
 app.post('/login', require('./api/router/postLogin'));
 app.post('/addUser', require('./api/router/addUser'));
+app.post('/getUsers', require('./api/router/getUsers'));
+app.post('/getGroups', require('./api/router/getGroups'));

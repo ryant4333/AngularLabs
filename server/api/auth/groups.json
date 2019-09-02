@@ -1,0 +1,11 @@
+[{
+    "groupName": "Group 1",
+    "channels": [
+        {"channelName":"ch1", "users":["super", "Ryan", "Luka"]},
+        {"channelName":"ch2", "users":["super", "Ryan", "Rusty"]},
+        {"channelName":"ch3", "users":["super", "Ryan", "Chris"]}]
+},{
+    "groupName": "Group 2",
+    "channels": [
+        {"channelName":"ch1", "users":["super", "Ryan"]}]
+}]
