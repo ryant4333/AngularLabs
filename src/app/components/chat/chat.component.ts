@@ -32,8 +32,7 @@ export class ChatComponent implements OnInit {
     //If chosen group is already group do nothing, else change chosen group
     if (this.chosenGroup === group) return;
     this.chosenGroup = group;
-    console.log(group)
-    console.log(this.chosenGroup)
+    this.chosenChannel = null;
   }
 
   public chooseChannel(channel) {
