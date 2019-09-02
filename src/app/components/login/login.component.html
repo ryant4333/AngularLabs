@@ -1,8 +1,7 @@
 <body>
-    <input type="email" [(ngModel)]="userpwd.username"> <br>
-    <input type="password" [(ngModel)]="userpwd.pwd"><br>
-    <input type="date" [(ngModel)]="userobj.userbirthdate"><br>
-    <input type="number" [(ngModel)]="userobj.userage"><br>
+    <input type="username" [(ngModel)]="loginInfo.username"> <br>
+    <input type="email" [(ngModel)]="loginInfo.email"> <br>
+    <input type="password" [(ngModel)]="loginInfo.pwd"><br>
     <button class="log_but" value="Login" id="login" (click)="loginfunc()">Login</button>
    
     <h2 *ngIf="showErr">Incorrect User or Password</h2>

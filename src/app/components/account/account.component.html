@@ -1,9 +1,20 @@
+<div>
 <h1>Accounts Page</h1>
 <img src="../../../assets/Images/Granny.jpg">
 
-<ng-template [ngIf]="show"; else option2>
+<ng-template [ngIf]="show">
     <div>Some Text</div>
 </ng-template>
+
+<div>
+    <h1>Add new user</h1>
+    <input type="username" [(ngModel)]="newUser.username"> <br>
+    <input type="email" [(ngModel)]="newUser.email"> <br>
+    <input type="password" [(ngModel)]="newUser.pwd"><br>
+    <button class="newU_but" value="Create New User" id="newUser" (click)="newUserfunc()">Create New User</button>
+   
+</div>
+</div>
 <!-- 
 <li *ngFor="let item of items; let i=index'let c=count">
     {{i+1}} of {{c}} - {{item.name}}
