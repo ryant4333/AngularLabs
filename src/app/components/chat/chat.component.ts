@@ -20,6 +20,8 @@ export class ChatComponent implements OnInit {
   public chosenChannel;
   public loggedUser;
   public newGroupObj = {groupName: ''};
+  public newChannelObj = {chanelName: '', parentName: ''}
+  public newUserObj = {nUserName: '', parentChannel: '', parentGroup: ''}
 
 
   ngOnInit() {
@@ -29,8 +31,6 @@ export class ChatComponent implements OnInit {
   }
 
   public updateData() {
-    this.chosenGroup = null;
-    this.chosenChannel = null;
     this.httpClient.post(BACKEND_URL + '/getGroups', httpOptions)
     .subscribe((data: any) => {
       this.groupsData = data.groupsData;
@@ -60,6 +60,34 @@ export class ChatComponent implements OnInit {
       this.updateData();
     })
   }
+
+  public newChannelFunc() {
+    console.log(this.chosenGroup)
+    this.newChannelObj.parentName = this.chosenGroup.groupName;
+    this.httpClient.post(BACKEND_URL + '/addChannel', this.newChannelObj, httpOptions)
+    .subscribe((data: any) => {
+      console.log(data.gen)
+      if(data.gen) {
+        alert("Channel Created!")
+      }
+    })
+    this.updateData();
+  }
+
+  public newUserFunc() {
+    this.newUserObj.parentChannel = this.chosenChannel.channelName;
+    this.newUserObj.parentGroup = this.chosenGroup.groupName;
+    console.log("NEWUSEROBJ")
+    this.httpClient.post(BACKEND_URL + '/channelAddUser', this.newUserObj, httpOptions)
+    .subscribe((data: any) => {
+      if(data.gen) {
+        alert("New User added to channel!")
+      }
+    })
+    this.updateData();
+  }
+
+
 
   public chooseGroup(group) {
     //If chosen group is already group do nothing, else change chosen group

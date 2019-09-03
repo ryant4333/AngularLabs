@@ -22,6 +22,9 @@
             {{channel.channelName}}
         </li>
     </ul>
+    <input type="newChannel" [(ngModel)]="newChannelObj.channelName">
+    <button class="nChannel_but" value="Create new Channel" (click)="newChannelFunc()">Create New Channel</button> 
+
 
 </div>
 
@@ -30,6 +33,9 @@
     <ul>
         <li *ngFor="let user of chosenChannel.users">{{user}}</li>
     </ul>
+    <input type="newUser" [(ngModel)]="newUserObj.nUserName">
+    <button class="nUser_but" value="Add new User" (click)="newUserFunc()">Add New User</button> 
+
 
 </div>
 

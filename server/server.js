@@ -26,4 +26,4 @@ app.post('/getGroups', require('./api/router/getGroups'));
 app.post('/addGroup', require('./api/router/addGroup'));
 app.post('/removeGroup', require('./api/router/removeGroup'));
 app.post('/addChannel', require('./api/router/addChannel'));
-app.post('/removeChannel', require('./api/router/removeChannel'));
+app.post('/channelAddUser', require('./api/router/channelAddUser'));
