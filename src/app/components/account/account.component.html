@@ -1,6 +1,5 @@
 <div>
 <h1>Accounts Page</h1>
-<img src="../../../assets/Images/Granny.jpg">
 
 <div *ngIf="loggedUser">
     <div>You are logged in as {{loggedUser}}</div>
@@ -11,6 +10,8 @@
     <ul>
         <li *ngFor="let user of userData">
             {{user.username}} is a {{user.role}}
+            <input type="userRole" [(ngModel)]="changeUserRole.Rrole">
+            <button class="userRoleBut" (click)="changeRole(user.username)">Change Role</button> 
         </li>
     </ul>
 </div>

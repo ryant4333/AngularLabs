@@ -24,6 +24,7 @@ export class AccountComponent implements OnInit {
   loggedUser;
   userRole;
   showUsers=true;
+  public changeUserRole = {Rusername: '', Rrole: ''};
 
   ngOnInit() {
     //Post to server to get list of users
@@ -35,8 +36,6 @@ export class AccountComponent implements OnInit {
 
     this.loggedUser = sessionStorage.getItem("user");
     this.userRole = sessionStorage.getItem("role");
-
-
   }
   
   public newUserFunc() {
@@ -50,5 +49,15 @@ export class AccountComponent implements OnInit {
         console.log("Error");
       }
     });
+  }
+
+  public makeAdmin(userName) {
+    this.changeUserRole.Rusername = userName
+    this.httpClient.post(BACKEND_URL + '/changeRole', this.changeUserRole, httpOptions)
+    .subscribe((data: any) => {
+      if (data.gen) {
+        console.log("User role chagned");
+      }
+    })
   }
 }
