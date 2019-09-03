@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+};
+
+import { newUser } from './newUser';
+import { Router } from '@angular/router';
+
+const BACKEND_URL = 'http://localhost:3000';
 
 @Component({
   selector: 'app-account',
@@ -7,9 +16,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  newUserInfo: newUser = {username: 'name', email: 'email', pwd:'pass'};
+ 
+  constructor(private router: Router, private httpClient: HttpClient) { }
+
+  userData =[];
+  loggedUser;
+  userRole;
+  showUsers=true;
+  public changeUserRole = {Rusername: '', Rrole: ''};
 
   ngOnInit() {
+    //Post to server to get list of users
+    this.httpClient.post(BACKEND_URL + '/getUsers', httpOptions)
+    .subscribe((data: any) => {
+      console.log(data.data)
+      this.userData = data.data;
+    })
+
+    this.loggedUser = sessionStorage.getItem("user");
+    this.userRole = sessionStorage.getItem("role");
+  }
+  
+  public newUserFunc() {
+    this.httpClient.post(BACKEND_URL + '/addUser', this.newUserInfo, httpOptions)
+    .subscribe((data: any) => {
+      alert(JSON.stringify(this.newUserInfo));
+      if (data.gen) {
+        console.log("NEW USER ADDED");
+      } else {
+        alert("Unable to generate User, User alread exists")
+        console.log("Error");
+      }
+    });
   }
 
+  public makeAdmin(userName) {
+    this.changeUserRole.Rusername = userName
+    this.httpClient.post(BACKEND_URL + '/changeRole', this.changeUserRole, httpOptions)
+    .subscribe((data: any) => {
+      if (data.gen) {
+        console.log("User role chagned");
+      }
+    })
+  }
 }

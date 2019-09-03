@@ -1,0 +1,54 @@
+[
+  {
+    "groupName": "Group 1",
+    "channels": [
+      {
+        "channelName": "ch1",
+        "users": [
+          "super",
+          "Ryan",
+          "Huy"
+        ]
+      },
+      {
+        "channelName": "ch2",
+        "users": [
+          "super",
+          "Ryan",
+          "Huy",
+          "Luka"
+        ]
+      },
+      {
+        "channelName": "Ch3",
+        "users": []
+      }
+    ]
+  },
+  {
+    "groupName": "Group 2",
+    "channels": [
+      {
+        "channelName": "Channel 4",
+        "users": []
+      },
+      {
+        "channelName": "Channel 5",
+        "users": []
+      }
+    ]
+  },
+  {
+    "groupName": "Group 3",
+    "channels": [
+      {
+        "channelName": "MYCHANNEL",
+        "users": []
+      },
+      {
+        "channelName": "Hello",
+        "users": []
+      }
+    ]
+  }
+]

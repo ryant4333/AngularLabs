@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'week4';
+
+  public logoutfunc() {
+    console.log("Logging out "+ sessionStorage.getItem("user"))
+    sessionStorage.removeItem("user")
+    sessionStorage.removeItem("role")
+  }
 }

@@ -1,8 +1,7 @@
 <body>
-    <form>
-        <input type="text" [(ngModel)]="firstName" name="firstName">
-        <input type="password" [(ngModel)]="pass" name="pass">
-        <button (click)="itemClicked()">Login</button>
-    </form>
+    <input type="username" [(ngModel)]="loginInfo.username"> <br>
+    <input type="password" [(ngModel)]="loginInfo.pwd"><br>
+    <button class="log_but" value="Login" id="login" (click)="loginfunc()">Login</button>
+   
     <h2 *ngIf="showErr">Incorrect User or Password</h2>
 </body>
