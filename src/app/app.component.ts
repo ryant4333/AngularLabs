@@ -11,5 +11,6 @@ export class AppComponent {
   public logoutfunc() {
     console.log("Logging out "+ sessionStorage.getItem("user"))
     sessionStorage.removeItem("user")
+    sessionStorage.removeItem("role")
   }
 }

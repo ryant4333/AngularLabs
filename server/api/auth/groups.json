@@ -1,11 +1,31 @@
-[{
+[
+  {
     "groupName": "Group 1",
     "channels": [
-        {"channelName":"ch1", "users":["super", "Ryan", "Luka"]},
-        {"channelName":"ch2", "users":["super", "Ryan", "Rusty"]},
-        {"channelName":"ch3", "users":["super", "Ryan", "Chris"]}]
-},{
+      {
+        "channelName": "ch1",
+        "users": [
+          "super",
+          "Ryan",
+          "Huy"
+        ]
+      },
+      {
+        "channelName": "ch1",
+        "users": [
+          "super",
+          "Ryan",
+          "Huy"
+        ]
+      }
+    ]
+  },
+  {
     "groupName": "Group 2",
-    "channels": [
-        {"channelName":"ch1", "users":["super", "Ryan"]}]
-}]
+    "channels": []
+  },
+  {
+    "groupName": "Group 3",
+    "channels": []
+  }
+]

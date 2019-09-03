@@ -16,5 +16,11 @@
     "email": "Luka@email.com",
     "pwd": "1234",
     "role": "user"
+  },
+  {
+    "username": "Huy",
+    "email": "huy@email",
+    "pwd": "1234",
+    "role": "user"
   }
 ]

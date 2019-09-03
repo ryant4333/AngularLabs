@@ -32,10 +32,8 @@ export class LoginComponent implements OnInit {
       // alert(JSON.stringify(this.loginInfo));
       
       if (data.ok) {
-        console.log("HOLY SHIT ITS WORKING");
         let user = this.loginInfo.username
         sessionStorage.setItem("role", data.role);
-        console.log("User role: " + data.role);
         sessionStorage.setItem("user", user);
         if (data.role == "super") {
           this.router.navigateByUrl('account');

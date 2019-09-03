@@ -1,10 +1,17 @@
+<div>
+    User: {{loggedUser}}
+</div>
+
 <div class="groupTab">
     <h1>Groups</h1>
     <ul>
         <li *ngFor="let group of groupsData" (click)="chooseGroup(group)">
             {{group.groupName}}
+            <button class="dGroup_but" (click)="delGroupFunc(group)">Delete Group</button>
         </li>
     </ul>
+    <input type="newGroup" [(ngModel)]="newGroupObj.groupName">
+    <button class="nGroup_but" value="Create new Group" (click)="newGroupFunc()">Create New Group</button> 
 
 </div>
 
