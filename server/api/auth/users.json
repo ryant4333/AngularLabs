@@ -1,0 +1,26 @@
+[
+  {
+    "username": "super",
+    "email": "email",
+    "pwd": "1234",
+    "role": "super"
+  },
+  {
+    "username": "Ryan",
+    "email": "Ryant4333@hotmail.com",
+    "pwd": "1234",
+    "role": "user"
+  },
+  {
+    "username": "Luka",
+    "email": "Luka@email.com",
+    "pwd": "1234",
+    "role": "user"
+  },
+  {
+    "username": "Huy",
+    "email": "huy@email",
+    "pwd": "1234",
+    "role": "user"
+  }
+]

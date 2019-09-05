@@ -1,0 +1,45 @@
+<div>
+    User: {{loggedUser}}
+</div>
+
+<div class="groupTab">
+    <h1>Groups</h1>
+    <ul>
+        <li *ngFor="let group of groupsData" (click)="chooseGroup(group)">
+            {{group.groupName}}
+            <button class="dGroup_but" (click)="delGroupFunc(group)">Delete Group</button>
+        </li>
+    </ul>
+    <input type="newGroup" [(ngModel)]="newGroupObj.groupName">
+    <button class="nGroup_but" value="Create new Group" (click)="newGroupFunc()">Create New Group</button> 
+
+</div>
+
+<div class="channelTab" *ngIf="chosenGroup">
+    <h1>Channels</h1>
+    <ul>
+        <li *ngFor="let channel of chosenGroup.channels" (click)="chooseChannel(channel)">
+            {{channel.channelName}}
+        </li>
+    </ul>
+    <input type="newChannel" [(ngModel)]="newChannelObj.channelName">
+    <button class="nChannel_but" value="Create new Channel" (click)="newChannelFunc()">Create New Channel</button> 
+
+
+</div>
+
+<div class="userTab" *ngIf="chosenChannel">
+    <h1>Users</h1>
+    <ul>
+        <li *ngFor="let user of chosenChannel.users">{{user}}</li>
+    </ul>
+    <input type="newUser" [(ngModel)]="newUserObj.nUserName">
+    <button class="nUser_but" value="Add new User" (click)="newUserFunc()">Add New User</button> 
+
+
+</div>
+
+<div class="chatBox">
+    <h1>The chats</h1>
+    
+</div>
